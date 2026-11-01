@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d3b2e">
+<title>نور القرآن الكريم</title>
+<style>
+:root{--bg:#f5f7f2;--card:#fff;--green:#0d3b2e;--gold:#c9a34a;--txt:#20352c}
+body.dark{--bg:#101c18;--card:#1b2b24;--txt:#f4f1e8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:Tahoma,Arial,sans-serif}
+header{background:var(--green);color:white;text-align:center;padding:28px 12px}
+header h1{color:#e8c76c;margin:0 0 8px;font-size:29px}
+header p{margin:0}
+nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:14px}
+button,select,input{font:inherit;border-radius:9px;padding:11px;border:1px solid #ccc}
+button{background:var(--green);color:white;border:0;cursor:pointer}
+main{max-width:850px;margin:15px auto;padding:12px}
+.card{background:var(--card);padding:18px;border-radius:14px;margin-bottom:16px;box-shadow:0 3px 12px #0001}
+h2{color:var(--gold);margin-top:0}
+select,input{width:100%;margin:7px 0;background:var(--card);color:var(--txt)}
+.ayah{font-size:23px;line-height:2.2;text-align:center;padding:14px;border-bottom:1px solid #ddd}
+.ayah button{font-size:13px;padding:6px 10px;margin:5px}
+audio{width:100%;margin-top:12px}
+footer{text-align:center;background:var(--green);color:white;padding:22px;margin-top:25px}
+a{color:#e8c76c}
+</style>
+</head>
+<body>
+<header>
+<h1>نور القرآن الكريم</h1>
+<p>نورٌ وهدى وطمأنينة للقلوب</p>
+</header>
+<nav>
+<button onclick="toggleTheme()">الوضع الليلي / النهاري</button>
+<button onclick="loadSurahs()">تحديث السور</button>
+</nav>
+<main>
+<section class="card">
+<h2>📖 القرآن الكريم</h2>
+<input id="search" placeholder="ابحث عن سورة..." oninput="filterSurahs()">
+<select id="surahs" onchange="loadSurah()">
+<option>جارٍ تحميل السور...</option>
+</select>
+<div id="info"></div>
+<div id="verses"></div>
+</section>
+<section class="card">
+<h2>🎧 الاستماع إلى القرآن الكريم</h2>
+<label>اختر القارئ:</label>
+<select id="reader">
+<option value="ar.alafasy">مشاري العفاسي</option>
+<option value="ar.abdurrahmaansudais">عبد الرحمن السديس</option>
+<option value="ar.husary">محمود خليل الحصري</option>
+<option value="ar.minshawi">محمد صديق المنشاوي</option>
+<option value="ar.mahermuaiqly">ماهر المعيقلي</option>
+</select>
+<p>اضغط على أي آية للاستماع إليها.</p>
+<audio id="player" controls></audio>
+</section>
+<section class="card">
+<h2>📻 إذاعة القرآن الكريم</h2>
+<p>استمع إلى إذاعة القرآن الكريم من القاهرة:</p>
+<audio controls preload="none" src="https://stream.radiojar.com/8s5u5tpdtwzuv"></audio>
+</section>
+<section class="card">
+<h2>🌐 تابعونا</h2>
+<p><a href="https://www.youtube.com/@nooralquran73">قناة يوتيوب</a></p>
+<p><a href="https://www.instagram.com/noor_alquran72/">إنستغرام</a></p>
+<p><a href="https://www.tiktok.com/@nooralqurankarim">تيك توك</a></p>
+</section>
+</main>
+<footer>
+<p>نور القرآن الكريم</p>
+<p>اللهم اجعل القرآن ربيع قلوبنا</p>
+</footer>
+<script>
+let allSurahs=[];
+let currentAyahs=[];
+async function loadSurahs(){
+try{
+let r=await fetch('https://api.alquran.cloud/v1/surah');
+let j=await r.json();
+allSurahs=j.data;
+showSurahs(allSurahs);
+}catch(e){
+document.getElementById('info').textContent='تعذر تحميل السور. تحقق من اتصال الإنترنت.';
+}
+}
+function showSurahs(list){
+let s=document.getElementById('surahs');
+s.innerHTML='';
+list.forEach(x=>{
+let o=document.createElement('option');
+o.value=x.number;
+o.textContent=x.number+' - '+x.name;
+s.appendChild(o);
+});
+if(list.length)loadSurah();
+}
+function filterSurahs(){
+let q=document.getElementById('search').value.trim();
+showSurahs(allSurahs.filter(x=>x.name.includes(q)||x.englishName.toLowerCase().includes(q.toLowerCase())));
+}
+async function loadSurah(){
+let n=document.getElementById('surahs').value;
+if(!n)return;
+document.getElementById('info').textContent='جارٍ تحميل السورة...';
+document.getElementById('verses').innerHTML='';
+try{
+let r=await fetch('https://api.alquran.cloud/v1/surah/'+n);
+let j=await r.json();
+currentAyahs=j.data.ayahs;
+document.getElementById('info').textContent=j.data.name+' — '+j.data.numberOfAyahs+' آية';
+let box=document.getElementById('verses');
+currentAyahs.forEach(a=>{
+let d=document.createElement('div');
+d.className='ayah';
+let t=document.createElement('span');
+t.textContent=a.text+' ۞ ';
+let b=document.createElement('button');
+b.textContent='استمع';
+b.onclick=()=>playAyah(a.numberInSurah);
+d.append(t,b);
+box.appendChild(d);
+});
+}catch(e){
+document.getElementById('info').textContent='حدث خطأ في تحميل السورة.';
+}
+}
+async function playAyah(number){
+let surah=document.getElementById('surahs').value;
+let reader=document.getElementById('reader').value;
+try{
+let r=await fetch('https://api.alquran.cloud/v1/surah/'+surah+'/'+reader);
+let j=await r.json();
+let a=j.data.ayahs.find(x=>x.numberInSurah===number);
+if(a){
+let p=document.getElementById('player');
+p.src=a.audio;
+p.play();
+}
+}catch(e){alert('تعذر تشغيل الصوت.');}
+}
+function toggleTheme(){document.body.classList.toggle('dark')}
+loadSurahs();
+</script>
+</body>
+</html>
