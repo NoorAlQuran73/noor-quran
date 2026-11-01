@@ -104,5 +104,10 @@ function resetTasbih(){tasbihCount=0;document.getElementById('tasbihCount').text
 
 try{setLanguage(localStorage.getItem('noor-language')||'auto')}catch(e){setLanguage('auto')}
 loadSurahs();loadReaders();if(navigator.geolocation)locate();
-
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+style="position:fixed;bottom:20px;left:20px;z-index:9999;
+width:52px;height:52px;border-radius:50%;font-size:28px;
+background:#c9a34a;color:white;box-shadow:0 3px 10px #0004;">
+↑
+</button>
 </script></body></html>
