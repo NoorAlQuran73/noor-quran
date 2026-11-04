@@ -2,205 +2,62 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0d3b2e">
-<meta name="description" content="نور القرآن الكريم: استمع واقرأ القرآن الكريم، وتابع مواقيت الصلاة واتجاه القبلة.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d5b46">
 <title>نور القرآن الكريم</title>
 <style>
-:root{--bg:#f4f7f3;--card:#fff;--ink:#17251f;--muted:#68766f;--green:#0d3b2e;--green2:#155b43;--gold:#c8a85a;--line:#e4ebe5;--soft:#edf4ef;--shadow:0 12px 35px #163d2a12}
-[data-theme="dark"]{--bg:#101a16;--card:#192720;--ink:#edf5ef;--muted:#a8b8ae;--green:#b9d9c6;--green2:#8bc4a3;--gold:#dfc178;--line:#2c4035;--soft:#20372b;--shadow:0 12px 35px #0004}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.7}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,92%);margin:auto}
-header{background:linear-gradient(125deg,#092d23,#155b43);color:#fff;padding:22px 0 32px;position:relative;overflow:hidden}
-header:after{content:"۞";position:absolute;left:4%;top:-50px;font-size:230px;color:#ffffff0b}
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:1}
-.brand{display:flex;align-items:center;gap:12px}.brandmark{width:52px;height:52px;border:1px solid #d6bd76;border-radius:16px;display:grid;place-items:center;color:#e4c875;font-size:27px}
-.brand h1{font-size:22px;margin:0}.brand small{color:#d6e6dc}.top-actions{display:flex;gap:8px}.top-actions button{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:12px;padding:8px 12px}
-.hero{text-align:center;padding:36px 0 12px;position:relative;z-index:1}.hero h2{font-size:clamp(25px,5vw,40px);margin:0 0 8px}.hero p{margin:0;color:#d7e7dc}
-nav{display:flex;gap:8px;overflow:auto;padding:15px 0;scrollbar-width:thin}.navbtn{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px}.navbtn.active{background:var(--green);color:white;border-color:var(--green)}
-main{padding-bottom:45px}.section{margin:20px 0;scroll-margin-top:15px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px}.section h2{font-size:21px;margin:0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}.feature{display:flex;gap:14px;align-items:flex-start}.ico{width:46px;height:46px;flex:0 0 46px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:23px;color:var(--green2)}.feature h3{margin:0 0 3px;font-size:17px}.feature p{margin:0;color:var(--muted);font-size:13px}
-.controls{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}.field{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:11px;padding:10px 12px;min-width:0}.btn{border:0;background:var(--green);color:white;border-radius:11px;padding:10px 15px}.btn.secondary{background:var(--soft);color:var(--green)}.btn.gold{background:var(--gold);color:#18251d}
-.surah-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.surah{display:flex;align-items:center;gap:10px;text-align:right;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:11px;border-radius:13px}.surah:hover{border-color:var(--gold)}.num{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--green2);font-size:13px}.surah strong{display:block}.surah small{color:var(--muted)}
-.reader{font-family:"Traditional Arabic",serif;font-size:25px;line-height:2.2;text-align:justify;max-height:460px;overflow:auto;padding:15px;background:var(--soft);border-radius:14px}.ayah{cursor:pointer}.ayah:hover{color:var(--green2)}.ayahnum{font-family:Tahoma;font-size:14px;color:var(--gold);white-space:nowrap}
-.prayer-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.pray{background:var(--soft);border-radius:12px;text-align:center;padding:12px 5px}.pray b{display:block;color:var(--green2)}.pray span{font-size:14px}
-.big-number{font-size:40px;font-weight:bold;text-align:center;color:var(--green2);font-variant-numeric:tabular-nums}.center{text-align:center}.list{padding:0;margin:0;list-style:none}.list li{padding:10px 0;border-bottom:1px solid var(--line)}
-.app-card{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.app-card .btn:disabled{opacity:.65;cursor:not-allowed}.app-card .ico{font-size:32px}footer{background:#092d23;color:#e2eee6;padding:25px 0;text-align:center}footer p{margin:4px}
-.player{position:sticky;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px;z-index:5;display:none}.player-inner{width:min(1160px,92%);margin:auto;display:flex;align-items:center;gap:12px}.player audio{width:100%;height:38px}
-.note{font-size:12px;color:var(--muted)}.hidden{display:none!important}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.surah-grid{grid-template-columns:repeat(2,1fr)}.prayer-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:520px){.top{align-items:flex-start}.brand h1{font-size:18px}.brandmark{width:44px;height:44px}.top-actions button{padding:7px}.hero{padding-top:25px}.grid{grid-template-columns:1fr}.surah-grid{grid-template-columns:1fr}.card{padding:15px}.section h2{font-size:19px}.player-inner{flex-wrap:wrap}}
+*{box-sizing:border-box}body{margin:0;background:#f4f7f2;color:#17342c;font:16px/1.8 Tahoma,Arial,sans-serif}
+.hero{background:linear-gradient(125deg,#092f28,#12654d 70%,#218467);color:white;padding:25px max(5vw,20px) 55px}
+.top,.hero-inner,.wrap{max-width:1120px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:bold;font-size:21px}.brand span{color:#e4c987}
+.hero-inner{padding:40px 0 8px}.eyebrow{color:#e4c987}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.35;margin:8px 0}.hero p{color:#d9e9e0;max-width:650px}
+.btn{border:0;border-radius:13px;padding:11px 18px;font:inherit;font-weight:bold;cursor:pointer;background:#e4c987;color:#17342c}.btn.alt{background:#ffffff1c;color:white;border:1px solid #ffffff66}
+.wrap{padding:0 18px 50px;margin-top:-20px}.nav{display:flex;gap:5px;overflow:auto;padding:10px;background:white;border-radius:16px;box-shadow:0 8px 28px #17342c16}
+.nav button{white-space:nowrap;border:0;background:transparent;padding:9px 14px;border-radius:10px;font:inherit;cursor:pointer;color:#17342c}.nav button.active,.nav button:hover{background:#0d5b46;color:white}
+.page{display:none;padding-top:24px}.page.active{display:block}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.panel,.tile{background:white;border:1px solid #e2eae2;border-radius:20px;padding:22px;box-shadow:0 7px 22px #17342c09}.panel h2{margin-top:0}
+.muted,.note{color:#718078}.daily{background:linear-gradient(135deg,#f4ead2,#fff9ec);color:#4b3a1b;padding:20px;border-radius:18px}.arabic{font:27px/2 Georgia,serif}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:17px}.tile{display:flex;gap:14px;align-items:center}.ico{font-size:28px}
+.prayer-hero{background:linear-gradient(130deg,#0d5b46,#167a5c);color:white;border-radius:20px;padding:23px;margin:15px 0}.prayer-hero .big{font-size:38px;font-weight:bold}
+.prayers{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.pray{background:#f1f6f1;border-radius:14px;text-align:center;padding:13px 5px}.pray span{display:block;color:#b38a43}.pray b{font-size:19px}
+.note{font-size:13px}.footer{text-align:center;padding:25px;color:#718078;border-top:1px solid #e2eae2}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.prayers{grid-template-columns:repeat(3,1fr)}.tiles{grid-template-columns:1fr}}
+@media(prefers-color-scheme:dark){body{background:#101d19;color:#edf5ef}.nav,.panel,.tile{background:#1b2b25;border-color:#30443a}.nav button{color:#edf5ef}.pray{background:#263a31}.muted,.note{color:#adbbb2}}
 </style>
 </head>
 <body>
-<header>
- <div class="wrap">
-  <div class="top">
-   <div class="brand"><div class="brandmark">۞</div><div><h1>نور القرآن الكريم</h1><small>نورٌ وهدايةٌ وطمأنينة</small></div></div>
-   <div class="top-actions"><select id="languageSelect" aria-label="اختيار اللغة" style="border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:12px;padding:8px;max-width:125px"><option value="auto">لغة الجهاز</option><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select><button id="themeBtn" aria-label="تغيير الوضع">☾ الوضع الليلي</button></div>
-  </div>
-  <div class="hero"><h2>وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا</h2><p>اقرأ، استمع، وتدبّر آيات الله أينما كنت</p></div>
- </div>
+<header class="hero">
+ <div class="top"><div class="brand"><span>۞</span> نور القرآن الكريم</div><div id="today"></div></div>
+ <div class="hero-inner"><div class="eyebrow">نورٌ وهدايةٌ وسكينة</div><h1>اجعل للقرآن<br>موعدًا في يومك</h1>
+ <p>رفيقك الروحاني للقرآن الكريم ومواقيت الصلاة والأذكار واتجاه القبلة، في تجربة عربية هادئة وسهلة.</p>
+ <button class="btn" data-page="prayer">🕌 مواقيت الصلاة</button> <button class="btn alt" data-page="quran">📖 ابدأ القراءة</button></div>
 </header>
-<div class="wrap">
-<nav aria-label="التنقل">
- <button class="navbtn active" data-go="quran">القرآن الكريم</button><button class="navbtn" data-go="listen">التلاوات</button><button class="navbtn" data-go="prayer">مواقيت الصلاة</button><button class="navbtn" data-go="qibla">اتجاه القبلة</button><button class="navbtn" data-go="tasbeeh">المسبحة</button><button class="navbtn" data-go="mosque">المساجد القريبة</button><button class="navbtn" data-go="radio">الإذاعة</button><button class="navbtn" data-go="apps">تطبيق الهاتف</button>
-</nav>
-<main>
- <section class="section">
-  <div class="grid">
-   <div class="card feature"><div class="ico">📖</div><div><h3>المصحف الشريف</h3><p>114 سورة مع فهرس السور والأجزاء والأحزاب.</p></div></div>
-   <div class="card feature"><div class="ico">🎧</div><div><h3>استمع للقرآن</h3><p>اختر القارئ والسورة واستمع مباشرة.</p></div></div>
-   <div class="card feature"><div class="ico">🕌</div><div><h3>عبادتك في وقتها</h3><p>مواقيت الصلاة والقبلة والمساجد القريبة.</p></div></div>
-  </div>
+<main class="wrap">
+ <nav class="nav" aria-label="التنقل"><button class="active" data-page="home">الرئيسية</button><button data-page="quran">القرآن الكريم</button><button data-page="prayer">مواقيت الصلاة</button><button data-page="qibla">اتجاه القبلة</button><button data-page="azkar">الأذكار</button><button data-page="about">عن الموقع</button></nav>
+ <section class="page active" id="home"><div class="grid">
+  <div class="panel"><h2>السلام عليكم ورحمة الله 🌿</h2><p class="muted">ابدأ يومك بذكر الله، واجعل الصلاة والقرآن نورًا يرافق خطواتك.</p>
+   <div class="tiles"><div class="tile"><span class="ico">📖</span><div><b>القرآن الكريم</b><div class="muted">١١٤ سورة</div></div></div><div class="tile"><span class="ico">🕌</span><div><b>الصلوات الخمس</b><div class="muted">تنظيم يومك بالعبادة</div></div></div></div>
+  </div><div class="daily"><div>✦ آية اليوم</div><div class="arabic">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div><small>سورة الرعد — الآية ٢٨</small></div></div>
+  <h2>خدماتك الروحانية</h2><div class="tiles"><div class="tile"><span class="ico">🕌</span> مواقيت الصلاة حسب موقعك</div><div class="tile"><span class="ico">🧭</span> تحديد اتجاه القبلة</div><div class="tile"><span class="ico">🤲</span> أذكار الصباح والمساء</div><div class="tile"><span class="ico">📿</span> مسبحة إلكترونية</div></div>
  </section>
- <section class="section" id="quran">
-  <div class="section-head"><h2>📖 القرآن الكريم كاملاً</h2><span class="muted" id="surahCount">114 سورة</span></div>
-  <input class="field" id="searchSurah" type="search" placeholder="ابحث عن سورة..." style="width:100%">
-  <div class="controls">
-   <select class="field" id="juzSelect"><option value="">اختر الجزء (1–30)</option></select>
-   <button class="btn secondary" id="loadJuz">عرض الجزء</button>
-   <select class="field" id="hizbSelect"><option value="">اختر الحزب (1–60)</option></select>
-   <button class="btn secondary" id="loadHizb">عرض الحزب</button>
-  </div>
-  <div class="surah-grid" id="surahList" style="margin-top:12px"><p class="muted">جارٍ تحميل فهرس السور...</p></div>
-  <div class="card" id="readerCard" style="margin-top:15px">
-   <div class="section-head"><h2 id="readerTitle">المصحف المكتوب</h2><button class="btn secondary" id="closeReader">إغلاق</button></div>
-   <div id="readerText" class="reader center">اختر سورة من الفهرس لعرض آياتها.</div>
-   <p class="note">اضغط على أي آية لتحديد موضعها. النص القرآني يُحمّل من خدمة القرآن الكريم.</p>
-  </div>
- </section>
- <section class="section" id="listen">
-  <div class="section-head"><h2>🎧 الاستماع إلى التلاوات</h2></div>
-  <div class="card">
-   <div class="controls">
-    <select class="field" id="reciter"><option value="ar.alafasy">مشاري العفاسي</option><option value="ar.abdurrahmaansudais">عبدالرحمن السديس</option><option value="ar.husary">محمود خليل الحصري</option><option value="ar.minshawi">محمد صديق المنشاوي</option><option value="ar.abdulbasit">عبدالباسط عبدالصمد</option></select>
-    <select class="field" id="audioSurah"><option value="1">الفاتحة</option></select>
-    <button class="btn" id="playQuran">▶ تشغيل التلاوة</button>
-   </div>
-   <p class="note">يمكن اختيار القارئ والسورة ثم تشغيل التلاوة. يلزم اتصال بالإنترنت.</p>
-  </div>
- </section>
- <section class="section" id="prayer">
-  <div class="section-head"><h2>🕋 مواقيت الصلاة</h2><button class="btn secondary" id="locatePrayer">تحديد موقعي</button></div>
-  <div class="card">
-   <div class="section-head"><strong id="cityLabel">مواقيت الصلاة حسب موقعك</strong><span class="muted" id="hijriDate"></span></div>
-   <div class="prayer-grid" id="prayerTimes"><div class="pray">الفجر<b>--:--</b></div><div class="pray">الشروق<b>--:--</b></div><div class="pray">الظهر<b>--:--</b></div><div class="pray">العصر<b>--:--</b></div><div class="pray">المغرب<b>--:--</b></div><div class="pray">العشاء<b>--:--</b></div></div>
-   <p class="note">اسمح للموقع باستخدام موقعك للحصول على مواقيت أدق. عند عدم السماح، تُعرض مواقيت تونس العاصمة كخيار افتراضي.</p>
-  </div>
- </section>
- <section class="section" id="qibla">
-  <div class="section-head"><h2>🧭 اتجاه القبلة</h2><button class="btn secondary" id="getQibla">تحديد اتجاه القبلة</button></div>
-  <div class="card center"><div style="font-size:52px">🕋</div><div class="big-number" id="qiblaDegree">--°</div><p id="qiblaText" class="muted">اضغط على الزر لتحديد اتجاه القبلة من موقعك.</p><p class="note">الاتجاه محسوب من الشمال باتجاه عقارب الساعة. استخدم بوصلة الهاتف بعد معايرتها.</p></div>
- </section>
- <section class="section" id="tasbeeh">
-  <div class="section-head"><h2>📿 المسبحة الإلكترونية</h2></div>
-  <div class="card center"><div class="big-number" id="counter">0</div><p class="muted">سبحان الله، والحمد لله، ولا إله إلا الله، والله أكبر</p><div class="controls" style="justify-content:center"><button class="btn gold" id="countBtn" style="min-width:150px">＋ تسبيح</button><button class="btn secondary" id="resetCount">إعادة التصفير</button></div></div>
- </section>
- <section class="section" id="mosque">
-  <div class="section-head"><h2>🕌 المساجد القريبة منك</h2><button class="btn secondary" id="findMosques">ابحث بالقرب مني</button></div>
-  <div class="card"><p id="mosqueStatus" class="muted">فعّل الموقع وابحث عن المساجد القريبة منك.</p><ul class="list" id="mosqueList"></ul><a id="mosqueMap" class="btn secondary hidden" target="_blank" rel="noopener">عرض المساجد على الخريطة</a><p class="note">تُستخدم بيانات خرائط OpenStreetMap، وقد لا تكون جميع المساجد مسجلة أو محدثة.</p></div>
- </section>
- <section class="section" id="radio">
-  <div class="section-head"><h2>📻 إذاعة القرآن الكريم</h2></div>
-  <div class="card"><div class="controls"><select class="field" id="radioSelect" style="flex:1"><option>جارٍ تحميل الإذاعات...</option></select><button class="btn" id="playRadio">▶ استمع الآن</button></div><audio id="radioAudio" controls style="width:100%"></audio><p class="note">تتوفر الإذاعات حسب الخدمة وروابط البث المتاحة.</p></div>
- </section>
-
- <section class="section" id="apps">
-  <div class="section-head"><h2>📱 تطبيق نور القرآن الكريم للهاتف</h2><span class="muted">Android و iPhone</span></div>
-  <div class="grid">
-   <div class="card app-card">
-    <div class="ico">🤖</div><h3>تطبيق Android</h3>
-    <p>سيكون رابط التحميل عبر متجر Google Play متاحاً بعد نشر التطبيق رسمياً.</p>
-    <button class="btn" type="button" disabled>قريباً على Google Play</button>
-   </div>
-   <div class="card app-card">
-    <div class="ico">🍎</div><h3>تطبيق iPhone و iPad</h3>
-    <p>سيكون رابط التحميل عبر App Store متاحاً بعد نشر التطبيق رسمياً واعتماده.</p>
-    <button class="btn" type="button" disabled>قريباً على App Store</button>
-   </div>
-  </div>
-  <div class="card" style="margin-top:14px">
-   <h3>إضافة الموقع إلى الشاشة الرئيسية الآن</h3>
-   <p>يمكنك استخدام موقع نور القرآن الكريم كأنه تطبيق على هاتفك، دون انتظار نشره في المتاجر.</p>
-   <button class="btn" id="installApp" type="button">📲 تثبيت / إضافة إلى الشاشة الرئيسية</button>
-   <p class="note" id="installHelp" aria-live="polite">على Android: افتح الموقع في Chrome ثم اختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية» من القائمة. على iPhone: افتح الموقع في Safari ثم اضغط «مشاركة» واختر «إضافة إلى الشاشة الرئيسية».</p>
-  </div>
- </section>
+ <section class="page" id="quran"><div class="panel"><h2>📖 القرآن الكريم</h2><div class="daily"><div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><p>﴿ اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ ﴾</p></div><p class="note">هذه واجهة أولية؛ المصحف الكامل والتلاوات يحتاجان إلى ربط مصدر موثوق للبيانات.</p></div></section>
+ <section class="page" id="prayer"><div class="panel"><h2>🕌 مواقيت الصلاة</h2><button class="btn" id="locate">تحديد موقعي وجلب المواقيت</button>
+  <div class="prayer-hero"><div id="city">المواقيت الافتراضية — تونس</div><div>الصلاة القادمة</div><div class="big" id="next">الفجر</div><div id="nextTime">—</div></div>
+  <div class="prayers" id="times"></div><p class="note">الأوقات الافتراضية توضيحية وليست معتمدة. استخدم تحديد الموقع لجلب مواقيت اليوم.</p>
+ </div></section>
+ <section class="page" id="qibla"><div class="panel" style="text-align:center"><h2>🧭 اتجاه القبلة</h2><div style="font-size:85px">🕋</div><button class="btn" id="qiblaBtn">احسب اتجاه القبلة</button><p id="qiblaResult"></p></div></section>
+ <section class="page" id="azkar"><div class="panel"><h2>🤲 الذكر والتسبيح</h2><div class="daily arabic">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div><p>ردد الذكر واجعل لسانك رطبًا بذكر الله.</p><button class="btn" id="count">تسبيح <b id="counter">٠</b></button> <button class="btn" id="reset">إعادة</button></div></section>
+ <section class="page" id="about"><div class="panel"><h2>عن نور القرآن الكريم</h2><p>موقع إسلامي يجمع خدمات روحانية في واجهة عربية سهلة الاستخدام. نسأل الله أن يجعله نافعًا ومباركًا.</p></div></section>
 </main>
-</div>
-<footer><div class="wrap"><strong>نور القرآن الكريم</strong><p>اللهم اجعل القرآن ربيع قلوبنا ونور صدورنا</p><p class="note" style="color:#c9d8ce">© <span id="year"></span> نور القرآن الكريم</p></div></footer>
-<div class="player" id="audioPlayer"><div class="player-inner"><strong id="nowPlaying">التلاوة</strong><audio id="quranAudio" controls></audio></div></div>
+<footer class="footer">نور القرآن الكريم · اللهم اجعل القرآن ربيع قلوبنا ونور صدورنا</footer>
 <script>
-const API='https://api.alquran.cloud/v1';
-const $=id=>document.getElementById(id);
-let surahs=[];
-$('year').textContent=new Date().getFullYear();
-$('themeBtn').addEventListener('click',()=>{const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('themeBtn').textContent=dark?'☀ الوضع النهاري':'☾ الوضع الليلي';});
-document.querySelectorAll('.navbtn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.navbtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');$(b.dataset.go).scrollIntoView({behavior:'smooth'});}));
-
-let deferredInstallPrompt=null;
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstallPrompt=e;$('installApp').disabled=false;$('installHelp').textContent='يمكن تثبيت الموقع مباشرة على هذا الجهاز بالضغط على الزر.';});
-$('installApp').addEventListener('click',async()=>{
- if(deferredInstallPrompt){
-  deferredInstallPrompt.prompt();
-  const choice=await deferredInstallPrompt.userChoice;
-  $('installHelp').textContent=choice.outcome==='accepted'?'تم اختيار تثبيت الموقع.':'يمكنك تثبيته لاحقاً من قائمة المتصفح.';
-  deferredInstallPrompt=null;
- }else{
-  $('installHelp').textContent='إذا كنت على Android افتح القائمة ⋮ في Chrome واختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية». إذا كنت على iPhone افتح الموقع في Safari ثم اضغط «مشاركة» ← «إضافة إلى الشاشة الرئيسية».';
- }
-});
-\nasync function loadSurahs(){try{const r=await fetch(API+'/surah');if(!r.ok)throw Error();const j=await r.json();surahs=j.data;renderSurahs();$('audioSurah').innerHTML=surahs.map(s=>`<option value="${s.number}">${s.number}. ${s.name}</option>`).join('');}catch(e){$('surahList').innerHTML='<p class="muted">تعذر تحميل السور. تحقق من اتصال الإنترنت ثم حدّث الصفحة.</p>';}}
-function renderSurahs(){const q=$('searchSurah').value.trim();const found=surahs.filter(s=>s.name.includes(q)||s.englishName.toLowerCase().includes(q.toLowerCase())||String(s.number)===q);$('surahList').innerHTML=found.map(s=>`<button class="surah" data-num="${s.number}"><span class="num">${s.number}</span><span><strong>${s.name}</strong><small>${s.revelationType==='Meccan'?'مكية':'مدنية'} • ${s.numberOfAyahs} آية</small></span></button>`).join('')||'<p class="muted">لا توجد سورة بهذا الاسم.</p>';document.querySelectorAll('.surah').forEach(b=>b.addEventListener('click',()=>loadSurah(+b.dataset.num)));}
-$('searchSurah').addEventListener('input',renderSurahs);
-async function loadSurah(n){$('readerTitle').textContent='جارٍ تحميل السورة...';$('readerText').textContent='';$('readerCard').scrollIntoView({behavior:'smooth'});try{const r=await fetch(`${API}/surah/${n}`);const j=await r.json();$('readerTitle').textContent=j.data.name+' — '+j.data.englishName;$('readerText').classList.remove('center');$('readerText').innerHTML=j.data.ayahs.map(a=>`<span class="ayah">${a.text} <span class="ayahnum">۞ ${a.numberInSurah}</span> </span>`).join('');}catch(e){$('readerText').textContent='تعذر تحميل السورة. حاول مرة أخرى.';}}
-$('closeReader').onclick=()=>{$('readerTitle').textContent='المصحف المكتوب';$('readerText').classList.add('center');$('readerText').textContent='اختر سورة من الفهرس لعرض آياتها.';};
-$('playQuran').onclick=async()=>{const n=$('audioSurah').value,edition=$('reciter').value;const b=$('playQuran');b.disabled=true;b.textContent='جارٍ التحميل...';try{const r=await fetch(`${API}/surah/${n}/${edition}`);const j=await r.json();if(!j.data.ayahs?.length)throw Error();const urls=j.data.ayahs.map(a=>a.audio);const audio=$('quranAudio');let i=0;audio.pause();audio.src=urls[0];$('audioPlayer').style.display='block';$('nowPlaying').textContent=surahs[n-1]?.name||'تلاوة القرآن';audio.onended=()=>{i++;if(i<urls.length){audio.src=urls[i];audio.play().catch(()=>{});}};audio.play();}catch(e){alert('تعذر تشغيل التلاوة حالياً. جرّب قارئاً آخر أو تحقق من الإنترنت.');}finally{b.disabled=false;b.textContent='▶ تشغيل التلاوة';}};
-function getPosition(success){if(!navigator.geolocation){alert('المتصفح لا يدعم تحديد الموقع.');return;}navigator.geolocation.getCurrentPosition(p=>success(p.coords.latitude,p.coords.longitude),()=>alert('لم نتمكن من تحديد موقعك. اسمح للموقع باستخدام الموقع من إعدادات الهاتف.'),{enableHighAccuracy:true,timeout:15000});}
-async function prayer(lat,lon){try{const r=await fetch(`https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${lon}&method=3`);const j=await r.json();const t=j.data.timings;$('prayerTimes').innerHTML=[['الفجر',t.Fajr],['الشروق',t.Sunrise],['الظهر',t.Dhuhr],['العصر',t.Asr],['المغرب',t.Maghrib],['العشاء',t.Isha]].map(x=>`<div class="pray">${x[0]}<b>${x[1]}</b></div>`).join('');$('hijriDate').textContent=j.data.date.hijri.date+' هـ';$('cityLabel').textContent='مواقيت الصلاة حسب إحداثيات موقعك';}catch(e){$('cityLabel').textContent='تعذر جلب مواقيت الصلاة';}}
-$('locatePrayer').onclick=()=>getPosition(prayer);
-prayer(10.1815,36.8065);
-async function qibla(lat,lon){try{const r=await fetch(`https://api.aladhan.com/v1/qibla/${lat}/${lon}`);const j=await r.json();const d=j.data.direction;$('qiblaDegree').textContent=d.toFixed(1)+'°';$('qiblaText').textContent='اتجه نحو '+d.toFixed(1)+' درجة من الشمال باتجاه عقارب الساعة.';}catch(e){$('qiblaText').textContent='تعذر حساب اتجاه القبلة.';}}
-$('getQibla').onclick=()=>getPosition(qibla);
-let count=0;$('countBtn').onclick=()=>{$('counter').textContent=++count;};$('resetCount').onclick=()=>{count=0;$('counter').textContent=count;};
-$('findMosques').onclick=()=>getPosition(async(lat,lon)=>{const status=$('mosqueStatus');status.textContent='جارٍ البحث عن المساجد القريبة...';$('mosqueList').innerHTML='';$('mosqueMap').classList.add('hidden');try{const query=`[out:json][timeout:20];(node["amenity"="place_of_worship"](around:4000,${lat},${lon});way["amenity"="place_of_worship"](around:4000,${lat},${lon});relation["amenity"="place_of_worship"](around:4000,${lat},${lon}););out center tags 20;`;const r=await fetch('https://overpass-api.de/api/interpreter',{method:'POST',body:query});const j=await r.json();const items=j.elements.filter(e=>e.tags?.religion==='muslim'||e.tags?.building==='mosque'||e.tags?.name).slice(0,12);if(!items.length){status.textContent='لم نعثر على مساجد مسجلة في نطاق 4 كم. جرّب فتح الخريطة.';}else{status.textContent='المساجد أو دور العبادة المسجلة بالقرب منك:';$('mosqueList').innerHTML=items.map(e=>`<li>🕌 ${e.tags.name||'مسجد'} <span class="muted">— ${e.tags['addr:street']||'قريب من موقعك'}</span></li>`).join('');}$('mosqueMap').href=`https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=15/${lat}/${lon}`;$('mosqueMap').classList.remove('hidden');}catch(e){status.textContent='تعذر تحميل قائمة المساجد. يمكنك فتح الخريطة والبحث عن مسجد قريب.';$('mosqueMap').href=`https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=15/${lat}/${lon}`;$('mosqueMap').classList.remove('hidden');}});
-async function loadRadios(){try{const r=await fetch('https://mp3quran.net/api/v3/radios?language=ar');const j=await r.json();const radios=j.radios||[];$('radioSelect').innerHTML=radios.map((x,i)=>`<option value="${encodeURIComponent(x.radio_url)}">${x.radio_name}</option>`).join('')||'<option>لا توجد إذاعات متاحة</option>';}catch(e){$('radioSelect').innerHTML='<option>تعذر تحميل الإذاعات</option>';}}
-$('playRadio').onclick=()=>{const url=decodeURIComponent($('radioSelect').value||'');if(!url.startsWith('http'))return alert('اختر إذاعة متاحة أولاً.');$('radioAudio').src=url;$('radioAudio').play().catch(()=>alert('تعذر تشغيل البث. قد يكون الرابط متوقفاً مؤقتاً.'));};
-for(let i=1;i<=30;i++)$('juzSelect').insertAdjacentHTML('beforeend',`<option value="${i}">الجزء ${i}</option>`);
-for(let i=1;i<=60;i++)$('hizbSelect').insertAdjacentHTML('beforeend',`<option value="${i}">الحزب ${i}</option>`);
-async function loadSection(type,n){$('readerTitle').textContent='جارٍ تحميل '+(type==='juz'?'الجزء ':'الحزب ')+n+'...';$('readerText').textContent='';$('readerCard').scrollIntoView({behavior:'smooth'});try{const endpoint=type==='juz'?`/juz/${n}`:`/hizbQuarter/${(n-1)*4+1}`;const r=await fetch(API+endpoint);const j=await r.json();const ayahs=j.data.ayahs;$('readerTitle').textContent=(type==='juz'?'الجزء ':'الحزب ')+n;$('readerText').classList.remove('center');$('readerText').innerHTML=ayahs.map(a=>`<span class="ayah">${a.text} <span class="ayahnum">۞ ${a.surah.name} ${a.numberInSurah}</span> </span>`).join('');}catch(e){$('readerText').textContent='تعذر تحميل هذا القسم حالياً.';}}
-$('loadJuz').onclick=()=>{if($('juzSelect').value)loadSection('juz',+$('juzSelect').value);};
-$('loadHizb').onclick=()=>{if($('hizbSelect').value)loadSection('hizb',+$('hizbSelect').value);};
-
-const translations = {"fr": {"نور القرآن الكريم": "Lumière du Saint Coran", "نورٌ وهدايةٌ وطمأنينة": "Lumière, guidance et sérénité", "وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا": "Récitez le Coran avec mesure", "اقرأ، استمع، وتدبّر آيات الله أينما كنت": "Lisez et écoutez le Coran où que vous soyez", "القرآن الكريم": "Le Saint Coran", "التلاوات": "Récitations", "مواقيت الصلاة": "Horaires de prière", "اتجاه القبلة": "Direction de la Qibla", "المسبحة": "Chapelet", "المساجد القريبة": "Mosquées proches", "الإذاعة": "Radio", "المصحف الشريف": "Le Coran", "استمع للقرآن": "Écouter le Coran", "عبادتك في وقتها": "Votre prière à l’heure", "القرآن الكريم كاملاً": "Le Coran complet", "المصحف المكتوب": "Coran écrit", "الاستماع إلى التلاوات": "Écouter les récitations", "الوضع الليلي والنهاري": "Mode sombre et clair", "مواقيت الصلاة حسب موقعك": "Horaires de prière selon votre position", "تحديد موقعي": "Me localiser", "تحديد اتجاه القبلة": "Trouver la Qibla", "المسبحة الإلكترونية": "Chapelet électronique", "تسبيح": "Tasbih", "إعادة التصفير": "Réinitialiser", "المساجد القريبة منك": "Mosquées près de vous", "ابحث بالقرب مني": "Rechercher à proximité", "إذاعة القرآن الكريم": "Radio du Coran", "استمع الآن": "Écouter maintenant", "اتصل بنا": "Contactez-nous", "اختر سورة من الفهرس لعرض آياتها.": "Choisissez une sourate dans l’index pour afficher ses versets.", "ابحث عن سورة...": "Rechercher une sourate...", "جارٍ تحميل فهرس السور...": "Chargement de l’index des sourates...", "الفجر": "Fajr", "الشروق": "Lever du soleil", "الظهر": "Dhuhr", "العصر": "Asr", "المغرب": "Maghrib", "العشاء": "Isha", "سبحان الله، والحمد لله، ولا إله إلا الله، والله أكبر": "Gloire à Dieu, louange à Dieu, il n’y a de divinité que Dieu, Dieu est le plus grand", "اللهم اجعل القرآن ربيع قلوبنا ونور صدورنا": "Ô Allah, fais du Coran le printemps de nos cœurs et la lumière de nos poitrines"}, "en": {"نور القرآن الكريم": "Noor Al-Quran", "نورٌ وهدايةٌ وطمأنينة": "Light, guidance and tranquility", "اقرأ، استمع، وتدبّر آيات الله أينما كنت": "Read, listen and reflect on the Quran wherever you are", "القرآن الكريم": "The Holy Quran", "التلاوات": "Recitations", "مواقيت الصلاة": "Prayer Times", "اتجاه القبلة": "Qibla Direction", "المسبحة": "Tasbeeh", "المساجد القريبة": "Nearby Mosques", "الإذاعة": "Radio", "المصحف الشريف": "The Holy Quran", "استمع للقرآن": "Listen to the Quran", "عبادتك في وقتها": "Stay on time for prayer", "القرآن الكريم كاملاً": "Complete Quran", "المصحف المكتوب": "Written Quran", "الاستماع إلى التلاوات": "Listen to Recitations", "الوضع الليلي والنهاري": "Dark and Light Mode", "مواقيت الصلاة حسب موقعك": "Prayer times for your location", "تحديد موقعي": "Locate Me", "تحديد اتجاه القبلة": "Find Qibla Direction", "المسبحة الإلكترونية": "Digital Tasbeeh", "تسبيح": "Tasbeeh", "إعادة التصفير": "Reset", "المساجد القريبة منك": "Mosques Near You", "ابحث بالقرب مني": "Search Nearby", "إذاعة القرآن الكريم": "Quran Radio", "استمع الآن": "Listen Now", "اتصل بنا": "Contact Us", "اختر سورة من الفهرس لعرض آياتها.": "Choose a surah from the index to display its verses.", "ابحث عن سورة...": "Search for a surah...", "جارٍ تحميل فهرس السور...": "Loading surah index...", "الفجر": "Fajr", "الشروق": "Sunrise", "الظهر": "Dhuhr", "العصر": "Asr", "المغرب": "Maghrib", "العشاء": "Isha", "سبحان الله، والحمد لله، ولا إله إلا الله، والله أكبر": "Glory be to Allah, praise be to Allah, there is no god but Allah, Allah is the Greatest", "اللهم اجعل القرآن ربيع قلوبنا ونور صدورنا": "O Allah, make the Quran the spring of our hearts and the light of our chests"}};
-const originalTexts = new Map();
-function applyLanguage(lang){
-  const chosen = lang==='auto' ? ((navigator.language||'ar').toLowerCase().startsWith('fr')?'fr':(navigator.language||'ar').toLowerCase().startsWith('en')?'en':'ar') : lang;
-  document.documentElement.lang=chosen; document.documentElement.dir='rtl';
-  if(chosen!=='ar'){
-    const dict=translations[chosen];
-    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
-    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
-    nodes.forEach(node=>{
-      const raw=node.nodeValue.trim(); if(!raw)return;
-      if(dict[raw]){if(!originalTexts.has(node))originalTexts.set(node,node.nodeValue);node.nodeValue=node.nodeValue.replace(raw,dict[raw]);}
-    });
-    document.querySelectorAll('[placeholder]').forEach(el=>{const raw=el.getAttribute('placeholder');if(dict[raw]){if(!el.dataset.originalPlaceholder)el.dataset.originalPlaceholder=raw;el.setAttribute('placeholder',dict[raw]);}});
-    document.documentElement.dir='ltr';
-  } else {
-    for(const [node,value] of originalTexts) if(node.isConnected) node.nodeValue=value;
-    originalTexts.clear();
-    document.querySelectorAll('[data-original-placeholder]').forEach(el=>el.setAttribute('placeholder',el.dataset.originalPlaceholder));
-    document.documentElement.dir='rtl';
-  }
-  localStorage.setItem('noor-language',lang);
-}
-const languageSelect=document.getElementById('languageSelect');
-const savedLanguage=localStorage.getItem('noor-language')||'auto';
-languageSelect.value=savedLanguage;
-languageSelect.addEventListener('change',()=>applyLanguage(languageSelect.value));
-applyLanguage(savedLanguage);
-
-loadSurahs();loadRadios();
+const pages=[...document.querySelectorAll('.page')];
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>{pages.forEach(p=>p.classList.toggle('active',p.id===b.dataset.page));document.querySelectorAll('.nav button').forEach(n=>n.classList.toggle('active',n.dataset.page===b.dataset.page));window.scrollTo({top:0,behavior:'smooth'})}));
+const ar=n=>new Intl.NumberFormat('ar').format(n);
+document.getElementById('today').textContent=new Intl.DateTimeFormat('ar-TN',{dateStyle:'full'}).format(new Date());
+let prayers=[['الفجر','05:00'],['الشروق','06:20'],['الظهر','12:10'],['العصر','15:30'],['المغرب','18:00'],['العشاء','19:20']];
+function draw(){document.getElementById('times').innerHTML=prayers.map(p=>'<div class="pray"><span>'+p[0]+'</span><b>'+p[1]+'</b></div>').join('')}draw();
+document.getElementById('locate').onclick=()=>{const city=document.getElementById('city');if(!navigator.geolocation){city.textContent='تحديد الموقع غير مدعوم';return}city.textContent='جارٍ تحديد موقعك…';navigator.geolocation.getCurrentPosition(async p=>{try{const r=await fetch('https://api.aladhan.com/v1/timings?latitude='+p.coords.latitude+'&longitude='+p.coords.longitude+'&method=3');const j=await r.json(),t=j.data.timings;prayers=[['الفجر',t.Fajr],['الشروق',t.Sunrise],['الظهر',t.Dhuhr],['العصر',t.Asr],['المغرب',t.Maghrib],['العشاء',t.Isha]];draw();city.textContent='المواقيت حسب موقعك';const now=new Date(),next=prayers.find(x=>{const [h,m]=x[1].split(':').map(Number);return h*60+m>now.getHours()*60+now.getMinutes()})||prayers[0];document.getElementById('next').textContent=next[0];document.getElementById('nextTime').textContent=next[1]}catch(e){city.textContent='تعذر جلب المواقيت؛ تحقق من الإنترنت'}},()=>city.textContent='يرجى السماح بالوصول إلى الموقع')};
+document.getElementById('qiblaBtn').onclick=()=>{const out=document.getElementById('qiblaResult');if(!navigator.geolocation){out.textContent='تحديد الموقع غير مدعوم';return}out.textContent='جارٍ الحساب…';navigator.geolocation.getCurrentPosition(async p=>{try{const r=await fetch('https://api.aladhan.com/v1/qibla/'+p.coords.latitude+'/'+p.coords.longitude),j=await r.json();out.textContent='اتجاه القبلة: '+j.data.direction.toFixed(1)+'° من الشمال باتجاه عقارب الساعة'}catch(e){out.textContent='تعذر حساب الاتجاه الآن'}},()=>out.textContent='يرجى السماح بتحديد الموقع')};
+let n=0;document.getElementById('count').onclick=()=>document.getElementById('counter').textContent=ar(++n);document.getElementById('reset').onclick=()=>{n=0;document.getElementById('counter').textContent=ar(n)};
 </script>
-</body>
-</html>
+</body></html>
